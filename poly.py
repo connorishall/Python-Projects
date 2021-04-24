@@ -1,44 +1,65 @@
 #Parent class
-class Car:
-    name = "Mazda"
-    email = "Miata"
-    password = "White"
-
+class user:
+    name = "connor"
+    make = "mazda"
+    model = "miata"
+    color = "2016"
+    
+#user login
     def getLoginInfo(self):
-        print("what is car your manufacture.")
-        entry_name = input("Enter your name: ")
-        print("What is your car model.")
-        entry_email = input("Enter your email: ")
-        print("What is your car color.")
-        entry_password = input("Enter your password: ")
-        if (entry_email == self.email and entry_password == self.password):
+        entry_name = input("What is your name: ")
+        
+        print("What is your car manufacture?")
+        entry_make = input("Enter your make: ")
+        
+        print("What is your car model?")
+        entry_model = input("Enter your model: ")
+        
+        print("When was your car made?")
+        entry_color = input("Enter the year: ")
+
+#conditonal statment to check if the information is correct 
+        
+        if (entry_model == self.model and entry_color == self.color and entry_make == self.make):
             print("Welcome back, {}!".format(entry_name))
+            
         else:
-            print("The password or email is incorrect.")
+            print("Please type in the car you own.")
+
+        
 
 #Child Class
-class Employee(Car):
-    base_pay = "manual"
-    department = "155"
-    
+class dealer(user):
+    price = "19,000"
+    pin = "1234"
 
 #Employee login
 
     def getLoginInfo(self):
-        print("Do you have a manual or an automatic.")
-        entry_name = input("Enter your transmission type: ")
-        print("How much hourse power do you have?")
-        entry_email = input("Enter your house power: ")
+        entry_name = input("What is your name: ")
+        
+        print("What is your car manufacture?")
+        entry_make = input("Enter your make: ")
+        
+        print("What is your car model?")
+        entry_model = input("Enter your model: ")
+        
+        print("When was your car made?")
+        entry_color = input("Enter the year: ")
+
+        entry_pin = input("What is your pin: ")
+        
+#conditonal statment to check if the information is correct
        
-        if (entry_email == self.email):
+        if (entry_model == self.model and entry_pin == self.pin):
             print("Welcome back, {}!".format(entry_name))
         else:
-            print("The pin or email is incorrect")
+            print("Your information is incorrect.")
 
 
-customer = Car()
+customer = user()
 customer.getLoginInfo()
 
-manager = Employee()
+manager = dealer()
 manager.getLoginInfo()
         
