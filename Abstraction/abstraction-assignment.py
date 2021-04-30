@@ -10,10 +10,9 @@ class car(ABC):
             pass
 
 class DebitCardPayment(car):
-    def __init__(self, amount):
-        def payment(self, amount):
-            print('Your purchase amount {} exceeded your $100 limit '.format(amount))
+    def payment(self, amount):
+        print('Your purchase amount {} exceeded your $100 limit '.format(amount))
             
-obj = DebitCardPayment(car)
+obj = DebitCardPayment()
 obj.paySlip("$400")
 obj.payment("$400")
