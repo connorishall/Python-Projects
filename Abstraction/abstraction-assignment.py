@@ -1,18 +1,24 @@
 
 from abc import ABC, abstractmethod
-class car(ABC):
+#parent class
+class mortgage(ABC):
     def paySlip(self, amount):
-        print("Your purchase amount: ",amount)
+        print("On your mortgage you owe:",amount)
 
 
         @abstractmethod
         def payment(self, amount):
             pass
-
-class DebitCardPayment(car):
+#child class
+class MortgagePayment(mortgage):
+    #Implementing the parent class
     def payment(self, amount):
-        print('Your purchase amount {} exceeded your $100 limit '.format(amount))
-            
-obj = DebitCardPayment()
-obj.paySlip("$400")
-obj.payment("$400")
+        print('You only paid {} '.format(amount))
+
+        
+
+obj = MortgagePayment()
+#Information used for child and parent class
+obj.paySlip("$1002")
+obj.payment("$500")
+
