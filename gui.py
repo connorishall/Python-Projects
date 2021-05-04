@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import open_html
 
 
 master = tk.Tk()
@@ -12,9 +12,10 @@ e1 = tk.Entry(master)
 
 e1.grid(row=0, column=1)
 
+
 tk.Button(master, 
           text='Submit', 
-          command=master.quit).grid(row=3, 
+          command = lambda: open_html.test()).grid(row=3, 
                                     column=0, 
                                     sticky=tk.W, 
                                     pady=4)
