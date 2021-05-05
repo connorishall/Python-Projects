@@ -24,11 +24,11 @@ inputtxt = tk.Text(frame,
   
 inputtxt.pack()
   
-#Button Creation
+# Button Creation
 printButton = tk.Button(frame,
                         text = "Submit", 
                         command = lambda:printInput())
-printButton.pack()
+
 # Label Creation
 lbl = tk.Label(frame, text = "")
 lbl.pack()
