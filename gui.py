@@ -6,17 +6,28 @@ master = tk.Tk()
 tk.Label(master, 
          text="Type in anything").grid(row=0)
 
+def printInput():
+    inp = inputtxt.get(1.0, "end-1c")
+    htmlCode = "<!DOCTYPE html><html><body><h1> {} </h1></body></html>".format(inp)
+    f = open('summer.html', 'w')
+    f.write(htmlCode)
+    f.close()
+    webbrowser.open_new_tab('summer.html')
 
-e1 = tk.Entry(master)
 
 
-e1.grid(row=0, column=1)
 
+# TextBox Creation
+inputtxt = tk.Text(frame,
+                   height = 5,
+                   width = 20)
+  
+inputtxt.pack()
+  
+#Button Creation
+printButton = tk.Button(frame,
+                        text = "Submit", 
+                        command = lambda:printInput())
+printButton.pack()
 
-tk.Button(master, 
-          text='Submit', 
-          command = lambda: open_html.test()).grid(row=3, 
-                                    column=0, 
-                                    sticky=tk.W, 
-                                    pady=4)
 tk.mainloop()
